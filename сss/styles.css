@@ -157,11 +157,11 @@ li.item:last-child{
 }
 
 .item-contact {
-display: block;
-margin-left: 50px;
+  display: block;
+  margin-left: 50px;
 }
 .item-contact:first-child {
-margin-left: 0px;
+  margin-left: 0px;
 
 }
 /* зміна кольорів при фокусі і ховері */
@@ -181,11 +181,22 @@ section.section-progect {
 }
 
 .hero {
-    background-color: var(--tertiary-background-page);
-  text-align: center;
+  width: 1600px;
+  height: 600px;
   padding: 200px 0px 200px;
 
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  background-color: #C4C4C4;
+
+  background-image: linear-gradient(
+    to right,
+   rgba(47, 48, 58, 0.4),
+   rgba(47, 48, 58, 0.4)),
+  url('../images/decoration-img/hero.jpg');
 }
+
 h1 {
   display: block;
   margin-top: 0px;
@@ -346,6 +357,11 @@ h1 {
 }
 
 .background-color-section {
+  width: 1600px;
+  height: 708px;
+  margin-right: auto;
+  margin-left: auto;
+
   background-color: var(--secondary-background-page);
 }
 
