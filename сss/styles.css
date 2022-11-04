@@ -61,6 +61,17 @@ li {
   font-family: inherit;
 }
 
+/* Остання дитина без правого маджана */
+li.item:last-child,
+.hidden:last-child,
+.example-progect:last-child,
+.staff-items:last-child,
+.staff-items:last-child,
+.button-link:last-child,
+.item-contact:last-child{
+  margin-right: 0px;
+}
+/* Падінги всіх секцій */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -134,9 +145,8 @@ li.item {
   display: block ;
   margin-right: 50px;
 }
-li.item:last-child{
-  margin-right: 0px;
-}
+
+
 /* Контакти */
 .contact-link {
   padding-top: 32px;
@@ -158,12 +168,9 @@ li.item:last-child{
 
 .item-contact {
   display: block;
-  margin-left: 50px;
+  margin-right: 50px;
 }
-.item-contact:first-child {
-  margin-left: 0px;
 
-}
 /* зміна кольорів при фокусі і ховері */
 .contact-link:hover,
 .contact-link:focus,
@@ -242,9 +249,6 @@ h1 {
   margin-right: 30px;
 }
 
-.hidden:last-child{
-  margin-right: 0px;
-}
 
 .list-hidden {
   display: flex;
@@ -275,7 +279,6 @@ h1 {
 
 /* Секція "команда" */
 
-
 .section-title-progect{
   margin-top: 0px;
 }
@@ -292,13 +295,9 @@ h1 {
   display: block;
   margin-right: 30px;
 }
-.example-progect:last-child{
-  margin-right: 0px;
-}
 
 .example-foto {
   display: block;
-
 }
 
 /* Секція з персоналом */
@@ -328,9 +327,6 @@ h1 {
 .staff-items {
   display: block;
   margin-right: 30px;
-}
-.staff-items:last-child{
-  margin-right: 0px;
 }
 
 .section-title-staff-name {
@@ -404,7 +400,6 @@ address {
 
   color: var(--tertiary-color-text);
   font-style: normal;
-
 }
 
 .address-post:last-child{
@@ -429,9 +424,6 @@ address {
 .button-link {
   display: block;
   margin-right: 8px;
-}
-.button-link:last-child{
-  margin-right: 0px;
 }
 
 .button-list {
