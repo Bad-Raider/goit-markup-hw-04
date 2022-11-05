@@ -15,7 +15,7 @@
 }
 
 
-/* __________ЗАГАЛЬНІ НАЛАШТУВАННЯ________________ */
+/* ___________________ЗАГАЛЬНІ НАЛАШТУВАННЯ________________ */
 html {
   box-sizing: border-box;
 } 
@@ -68,7 +68,9 @@ li.item:last-child,
 .staff-items:last-child,
 .staff-items:last-child,
 .button-link:last-child,
-.item-contact:last-child{
+.item-contact:last-child,
+.social-network > .element:last-child,
+.list-customer > .title-customer:last-child {
   margin-right: 0px;
 }
 /* Падінги всіх секцій */
@@ -77,7 +79,18 @@ li.item:last-child,
   padding-bottom: 94px;
 }
 
-/* ________________ХЕДЕР_________________ */
+/* зміна кольорів при фокусі і ховері */
+.contact-link:hover,
+.contact-link:focus,
+.footer-contact:hover,
+.footer-contact:focus,
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-color);
+}
+
+
+/* ____________________ХЕДЕР_________________ */
 header {
   border-bottom: 1px solid #ECECEC;
 }
@@ -88,10 +101,11 @@ header {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* outline: 2px solid red; */
+  outline: 2px solid red;
 }
 
-div.nav {
+div.nav,
+nav {
   display: flex;
   align-items: center;
 }
@@ -102,10 +116,11 @@ div.nav {
 .logo-span {
   color: var(--fourth-color-text);
   font-family: Raleway, sans-serif;
-font-weight: var(--secondary-font-weight);
-font-size: 26px;
-line-height: var(--primary-line-height);
+  font-weight: var(--secondary-font-weight);
+  font-size: 26px;
+  line-height: var(--primary-line-height);
 }
+
 .logo-span {
   color: var(--accent-color);
 }
@@ -115,13 +130,6 @@ line-height: var(--primary-line-height);
   padding-top: 24px;
   padding-bottom: 25px;
 }
-
-/* Наавігація*/
-nav {
-  display: flex;
-  align-items: center;
-}
-
 
 .nav-link {
   padding-top: 32px;
@@ -171,15 +179,7 @@ li.item {
   margin-right: 50px;
 }
 
-/* зміна кольорів при фокусі і ховері */
-.contact-link:hover,
-.contact-link:focus,
-.footer-contact:hover,
-.footer-contact:focus,
-.nav-link:hover,
-.nav-link:focus {
-  color: var(--accent-color);
-}
+
 
 /*  ______________ГЕРОЙ_________________ */
 
@@ -191,10 +191,10 @@ section.section-progect {
   width: 1600px;
   height: 600px;
   padding: 200px 0px 200px;
-
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+
   background-color: #C4C4C4;
 
   background-image: linear-gradient(
@@ -242,19 +242,45 @@ h1 {
 /* ________________СЕКЦІЇ____________________ */
 
 /* секція "Перевіги компанії" */
-
 .hidden {
   display:block;
   width: 270px;
   margin-right: 30px;
 }
 
-
 .list-hidden {
   display: flex;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0px;
+}
+
+.hidden::before{
+  content: "";
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--secondary-background-page);
+  border-radius: 4px;
+
+  background-position: center; 
+  background-repeat: no-repeat;
+
+}
+
+/* Зображення до сектції "наші переваги" */
+.icon-antena::before{
+  background-image: url(../images/decoration-img/icon-hidden/antenna.png);
+}
+.icon-clock::before{
+  background-image: url(../images/decoration-img/icon-hidden/clock.png);
+}
+.icon-diagram::before{
+  background-image: url(../images/decoration-img/icon-hidden/diagram.png);
+}
+.icon-astronautz::before{
+  background-image: url(../images/decoration-img/icon-hidden/astronautz.png);
 }
 
 .info {
@@ -303,7 +329,8 @@ h1 {
 /* Секція з персоналом */
 
 .section-title-progect,
-.section-title-staff {
+.section-title-staff,
+.header-customer {
   margin-bottom: 50px;
 
   color: var(--secondary-color-text);
@@ -327,6 +354,9 @@ h1 {
 .staff-items {
   display: block;
   margin-right: 30px;
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .section-title-staff-name {
@@ -344,12 +374,31 @@ h1 {
   line-height: var(--primary-line-height);
   text-align: center;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 }
 
 .staff-border {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  background-color: var(--primary-background-page);
+  border-radius: inherit;
+}
+
+.social-network{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.social-network > .element{
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+  outline: 2px solid black;
 }
 
 .background-color-section {
@@ -360,6 +409,29 @@ h1 {
 
   background-color: var(--secondary-background-page);
 }
+
+/* Секція "Постійні клієнти" */
+
+.header-customer{
+  margin-top: 0px;
+}
+
+.list-customer {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+
+.list-customer > .title-customer{
+  display: block;
+  width: 170px;
+  height: 92px;
+  margin-right: 30px;
+  outline: 2px solid black;
+}
+
 
 /* _______________ФУТЕР__________________ */
 footer {
@@ -415,6 +487,7 @@ address {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
 }
+
 .footer-contact:last-child{
   margin-bottom: 0px;
 }
