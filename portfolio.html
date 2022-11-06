@@ -11,30 +11,39 @@
   </head>
   <!-- Контент -->
   <body>
-    <header>
+    <header class="container">
       <!-- навігвція -->
-      <div class="nav container">
+      <div class="nav ">
         <nav class="nav">
           <!-- Logo -->
           <a href="" class="logo nav-and-logo-box"><span class="logo-span">Web</span>Studio</a>
           <ul class="link-page">
-            <li class="item"><a href="./index.html" class="nav-link">Студія</a></li>
+            <li class="item"><a href="./index.html" class="nav-link ">Студія</a></li>
             <li class="item"><a href="" class="nav-link current">Портфоліо</a></li>
             <li class="item"><a href="" class="nav-link">Контакти</a></li>
           </ul>
         </nav>
   
-      <ul class="contact">
-        <li class="item-contact">
-          <a href="mailto:info@devstudio.com" class="contact-link"
-            >info@devstudio.com</a
-          >
-        </li>
-        <li class="item-contact">
-          <a href="tel:+380961111111" class="contact-link">+38 096 111 11 11</a>
-        </li>
-      </ul>
-    </div>
+        <ul class="contact">
+          <li class="item-contact">
+            <a href="mailto:info@devstudio.com" class="contact-link"
+              > 
+                <svg class="item-contact-element" width="16" height="12">
+                  <use href="./images/decoration-img/icons.svg#icon-mail"></use>
+                </svg>
+      
+               <span>@devstudio.com</span></a
+            >
+          </li>
+          <li class="item-contact">
+            <a href="tel:+380961111111" class="contact-link">
+              <svg class="item-contact-element" width="10" height="16">
+                <use href="./images/decoration-img/icons.svg#icon-phone"></use>
+              </svg>
+            <span>+38 096 111 11 11</span></a>
+          </li>
+        </ul>
+      </div>
 
     </header>
     <!--унікальний контент -->
@@ -166,9 +175,14 @@
 </section>
 
     </main>
-    <!-- футер -->
+    
+    <!--================================================= -->
+    <!-- ===================== Футер==================== -->
+
+
     <footer >
-      <div class="container">
+      <div class="container footer-flex">
+        <div class="footer-info">
         <a href="" class="logo-footer"
         ><span class="logo-span">Web</span>Studio</a
       >
@@ -188,7 +202,51 @@
           >+38 096 111 11 11</a
         >
       </address>
+    </div>
+    <div class="footer-social-network">
+      <h2 class="header-network">приєднуйтесь</h2>
+      <ul class="footer-social-page">
+        <li class="social-page" width="44" heigth="44">
+          <svg class="social-page-link" width="20px" height="20px">
+            <use href="./images/decoration-img/icons.svg#icon-instagram"></use>
+          </svg>
+          <a href="http://instagram"
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          </a>
 
+        </li>
+        <li class="social-page" width="44" heigth="44">
+          <svg class="social-page-link" width="20px" height="20px">
+            <use href="./images/decoration-img/icons.svg#icon-twitter"></use>
+          </svg>
+          <a href="http://twitter"
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          </a>
+
+        </li>
+        <li class="social-page" width="44" heigth="44">
+          <svg class="social-page-link" width="20px" height="20px">
+            <use href="./images/decoration-img/icons.svg#icon-facebook"></use>
+          </svg>
+          <a href="http://facebook"
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          </a>
+
+        </li>
+        <li class="social-page" width="44" heigth="44">
+          <svg class="social-page-link" width="20px" height="20px">
+            <use href="./images/decoration-img/icons.svg#icon-linkedin"></use>
+          </svg>
+          <a href="http://linkedin"
+          target="_blank"
+          rel="noopener noreferrer nofollow">
+          </a>
+        </li>
+      </ul>
+    </div>
       </div>
     </footer>
   </body>
