@@ -206,7 +206,7 @@ section.section-progect {
 }
 
 .hero {
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
   padding: 200px 0px 200px;
   margin-right: auto;
@@ -443,8 +443,6 @@ h1 {
 
 
 .background-color-section {
-  width: 1600px;
-  height: 708px;
   margin-right: auto;
   margin-left: auto;
 
@@ -466,19 +464,26 @@ h1 {
 }
 
 .list-customer > .title-customer{
+  margin-right: 30px;
+}
+
+.link-customer {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 170px;
   height: 92px;
-  margin-right: 30px;
 
+  color: var(--primary-color-logo);
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   cursor: pointer;
+ 
 }
 
-.title-customer:hover {
+/* .title-customer:hover */
+.link-customer:hover,
+.link-customer:focus{
   border-color: var(--accent-color);
   color: var(--accent-color);
 }
@@ -496,6 +501,7 @@ footer {
 
 .footer-flex {
   display: flex;
+  align-items: baseline;
 }
 
 /* логотип */
