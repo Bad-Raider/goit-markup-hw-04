@@ -37,7 +37,10 @@ a {
 li {
   list-style-type: none;
 }
-
+/* прибираю стандартні ліві падінки */
+ul{
+  padding-left: 0px;
+}
 /* прибираю непотрібні заголовки */
 .visually-hidden {
   position: absolute;
@@ -406,8 +409,6 @@ h1 {
 .social-network{
   display: flex;
   justify-content: center;
-  padding-right: 32px;
-  padding-left: 32px;
 }
 
 .social-network > .element{
@@ -417,7 +418,6 @@ h1 {
   width: 44px;
   height: 44px;
   margin-right: 10px;
-  color: var(--primary-color-logo);
   border-radius: 50%;
   /* outline: 2px solid black; */
 }
@@ -428,19 +428,24 @@ h1 {
   cursor: pointer;
   border-radius: 50%;
   color: var(--tertiary-color-text);
+
 }
 
 .social-network-link {
-  display: block;
+  display: flex;
+  justify-content: center;
 
+  color: currentColor;
+}
+
+.social-network-link:hover,
+.social-network-link:focus {
   fill: currentColor;
 }
 
-.social-network-link:hover {
-  fill: var(--primary-background-page);
+.link-account {
+  fill: currentColor;
 }
-
-
 
 .background-color-section {
   margin-right: auto;
@@ -607,7 +612,8 @@ address {
 }
 
 .social-page-link {
-  display: block;
+  display: flex;
+  justify-content: center;
 
   fill: var(--tertiary-color-text);
 }
