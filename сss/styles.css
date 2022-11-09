@@ -419,33 +419,31 @@ h1 {
   height: 44px;
   margin-right: 10px;
   border-radius: 50%;
+  color: var(--primary-color-logo);
   /* outline: 2px solid black; */
-}
-
-.social-network > .element:hover,
-.social-network > .element:focus{
-  background-color: var(--accent-color);
-  cursor: pointer;
-  border-radius: 50%;
-  color: var(--tertiary-color-text);
-
 }
 
 .social-network-link {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
 
   color: currentColor;
 }
 
 .social-network-link:hover,
 .social-network-link:focus {
-  fill: currentColor;
+  background-color: var(--accent-color);
+  color: var(--tertiary-color-text);
 }
 
 .link-account {
   fill: currentColor;
 }
+
 
 .background-color-section {
   margin-right: auto;
@@ -600,20 +598,24 @@ address {
   width: 44px;
   height: 44px;
   margin-right: 10px;
-  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   
   border-radius: 50%;
 }
 
-.social-page:hover,
-.social-page:focus {
+.social-page-link:hover,
+.social-page-link:focus {
   background-color: var(--accent-color);
 }
 
 .social-page-link {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+
 
   fill: var(--tertiary-color-text);
 }
